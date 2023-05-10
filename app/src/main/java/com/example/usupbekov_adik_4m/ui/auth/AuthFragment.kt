@@ -8,10 +8,15 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.usupbekov_adik_4m.R
 import com.example.usupbekov_adik_4m.databinding.FragmentAuthBinding
+import com.google.android.gms.auth.api.identity.BeginSignInRequest
+import com.google.android.gms.auth.api.identity.Identity
+import com.google.android.gms.auth.api.identity.SignInClient
+
 
 class AuthFragment : Fragment() {
-
+    private lateinit var signInRequest: BeginSignInRequest
     private lateinit var binding: FragmentAuthBinding
+    private lateinit var oneTapClient: SignInClient
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,6 +30,18 @@ class AuthFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         authToVerify()
         authToHome()
+        oneTapClient = Identity.getSignInClient(requireActivity())
+        signInRequest = BeginSignInRequest.builder()
+            .setGoogleIdTokenRequestOptions(
+                BeginSignInRequest.GoogleIdTokenRequestOptions.builder()
+                    .setSupported(true)
+                    // Your server's client ID, not your Android client ID.
+                    .setServerClientId(getString(R.string.default_web_client_id))
+                    // Only show accounts previously used to sign in.
+                    .setFilterByAuthorizedAccounts(false)
+                    .build()
+            )
+            .build()
     }
 
     private fun authToHome( ) {

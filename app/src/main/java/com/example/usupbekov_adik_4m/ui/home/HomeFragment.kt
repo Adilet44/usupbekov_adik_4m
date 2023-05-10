@@ -21,7 +21,7 @@ class HomeFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        adapter = TaskAdapter (this::onLongClick)
+        adapter = TaskAdapter (this::onLongClick , this::onClick)
     }
 
 
@@ -51,6 +51,9 @@ class HomeFragment : Fragment() {
     private fun setData() {
         val list = App.db.taskDao().getAll()
         adapter.addTask(list)
+    }
+    private fun onClick(task: Task) {
+        findNavController().navigate(HomeFragmentDirections.actionNavigationHomeToTaskFragment(task))
     }
 
     private fun onLongClick(task: Task) {
