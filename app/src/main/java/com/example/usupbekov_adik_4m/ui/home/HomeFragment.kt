@@ -24,7 +24,6 @@ class HomeFragment : Fragment() {
         adapter = TaskAdapter (this::onLongClick , this::onClick)
     }
 
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
