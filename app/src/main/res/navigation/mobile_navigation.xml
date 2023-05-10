@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.usupbekov_adik_4m.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.usupbekov_adik_4m.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.usupbekov_adik_4m.ui.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/taskFragment"
+        android:name="com.example.usupbekov_adik_4m.ui.task.TaskFragment"
+        android:label="fragment_task"
+        tools:layout="@layout/fragment_task" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.usupbekov_adik_4m.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profie" />
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.example.usupbekov_adik_4m.ui.onBoard.onBoardingFragment"
+        android:label="onBoard"
+        tools:layout="@layout/fragment_on_boarding" />
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.example.usupbekov_adik_4m.ui.auth.AuthFragment"
+        android:label="fragment_auth"
+        tools:layout="@layout/fragment_auth" />
+    <fragment
+        android:id="@+id/acceptCodeFragment"
+        android:name="com.example.usupbekov_adik_4m.ui.auth.accept.AcceptCodeFragment"
+        android:label="fragment_accept_code"
+        tools:layout="@layout/fragment_accept_code" />
+    <fragment
+        android:id="@+id/verifyFragment"
+        android:name="com.example.usupbekov_adik_4m.ui.auth.verify.VerifyFragment"
+        android:label="fragment_verify"
+        tools:layout="@layout/fragment_verify" />
+</navigation>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "498427447491",
+    "project_id": "usupbekov-adik-4m",
+    "storage_bucket": "usupbekov-adik-4m.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:498427447491:android:f496ca572689a3e8a33a76",
+        "android_client_info": {
+          "package_name": "com.example.usupbekov_adik_4m"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "498427447491-36m304kd1snglbn48vhn2gobqv81m49t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCxnXFTNZXTpvkSGEc9oHGlrcr-MClOR0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "498427447491-36m304kd1snglbn48vhn2gobqv81m49t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
