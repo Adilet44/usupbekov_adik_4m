@@ -38,5 +38,4 @@ class AuthFragment : Fragment() {
             findNavController().navigate(R.id.verifyFragment)
         }
     }
-
 }
